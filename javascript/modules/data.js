@@ -37,7 +37,7 @@ const dinos = [
     owner: 'Abbey',
     adventures: [],
     health: 100,
-    imageUrl: 'https://lh3.googleusercontent.com/proxy/_rJSL88ErOEvgHl5SInWOEolOdikwIMcKWPv9iqZzt3IUkD33WdG6d9qd8TmNJFSiszTXm7JeGQPocmB_BZErKxt__25LOpW75dmnVuy0nuY0PatX2cIYA-C'
+    imageUrl: 'https://luksusbaby.com/images/schleich-tyrannosaurus-rex-juvenile-dinosaur-15007-p.png'
   },
   {
     id: 'dino5',

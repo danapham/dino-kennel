@@ -1,4 +1,4 @@
-import { getDinos } from "./data.js";
+import { getDinos, getAdventures } from "./data.js";
 
 const displayDinos = (divId, x, y) => {
   const dinos = getDinos();
@@ -44,6 +44,17 @@ const feedDino = (id) => {
     dinos[id].health += 10;
     $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
   })
+}
+
+const sendOnAdventure = (id) => {
+
+  const adventures = getAdventures();
+  const selectedAdventure = adventures[Math.floor(Math.random() * adventures.length)];
+  let adventureObj = {};
+
+  adventureObj.adventure = selectedAdventure.title;
+  adventureObj.timestamp = Date.now();
+  console.log(adventureObj);
 }
 
 export { displayDinos };

@@ -10,12 +10,12 @@ const displayDinos = (divId, x, y) => {
         <img src="${dinos[i].imageUrl}" class="card-img-top" alt="image of dinosaur">
         <div class="card-body">
           <h5 class="card-title">${dinos[i].name}</h5>
-          <p class="card-text" id="dinoHealth">Health: ${dinos[i].health}</p>
-          <a href="#" class="btn btn-primary">Feed</a>
-          <a href="#" class="btn btn-primary" id="petButton${i}">Pet</a>
-          <a href="#" class="btn btn-primary">Adventure</a>
-          <a href="#" class="btn btn-primary">Release</a>
-          <a href="#" class="btn btn-primary">View Profile</a>
+          <p class="card-text" id="dinoHealth${i}">Health: ${dinos[i].health}</p>
+          <button type="button" class="btn btn-primary">Feed</button>
+          <button type="button" class="btn btn-primary" id="petButton${i}">Pet</button>
+          <button type="button" class="btn btn-primary">Adventure</button>
+          <button type="button" class="btn btn-primary">Release</button>
+          <button type="button" class="btn btn-primary">View Profile</button>
         </div>
       </div>`
       )
@@ -31,10 +31,9 @@ const petDino = (id) => {
   const dinos = getDinos();
 
   $(`#petButton${id}`).click(() => {
-    dinos[id].health -= 10;
-    $("#dinoHealth").val(`Health: ${dinos[id].health}`)
+    dinos[id].health += 10;
+    $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
   })
-
 }
 
 export { displayDinos };

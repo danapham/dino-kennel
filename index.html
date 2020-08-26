@@ -18,21 +18,110 @@
       <a class="navbar-brand" href="index.html">Dino Kennel</a>
     </nav>
 
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Add Dino
+            </button>
+          </h2>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <form>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault01">Name</label>
+                  <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault02">Owner</label>
+                  <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault03">Age</label>
+                  <input type="text" class="form-control" id="validationDefault03" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationDefault05">Image</label>
+                  <input type="url" class="form-control" id="validationDefault05" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault03">Type</label>
+                  <input type="text" class="form-control" id="validationDefault03" required>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Kennel</a>
+        <a
+          class="nav-link active"
+          id="kennel-tab"
+          data-toggle="tab"
+          href="#kennel"
+          role="tab"
+          aria-controls="kennel"
+          aria-selected="true"
+          >Kennel</a
+        >
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hospital</a>
+        <a
+          class="nav-link"
+          id="hospital-tab"
+          data-toggle="tab"
+          href="#hospital"
+          role="tab"
+          aria-controls="hospital"
+          aria-selected="false"
+          >Hospital</a
+        >
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Graveyard</a>
+        <a
+          class="nav-link"
+          id="graveyard-tab"
+          data-toggle="tab"
+          href="#graveyard"
+          role="tab"
+          aria-controls="graveyard"
+          aria-selected="false"
+          >Graveyard</a
+        >
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
+      <div
+        class="tab-pane fade show active"
+        id="kennel"
+        role="tabpanel"
+        aria-labelledby="kennel-tab"
+      ></div>
+      <div
+        class="tab-pane fade"
+        id="hospital"
+        role="tabpanel"
+        aria-labelledby="hospital-tab"
+      ></div>
+      <div
+        class="tab-pane fade"
+        id="graveyard"
+        role="tabpanel"
+        aria-labelledby="graveyard-tab"
+      ></div>
     </div>
 
     <script

@@ -20,7 +20,7 @@ const displayDinos = (divId, x, y) => {
           <button type="button" class="btn btn-primary" id="feedButton${i}">Feed</button>
           <button type="button" class="btn btn-primary" id="petButton${i}">Pet</button>
           <button type="button" class="btn btn-primary" id="adventureButton${i}">Adventure</button>
-          <button type="button" class="btn btn-primary">Release</button>
+          <button type="button" class="btn btn-primary" id="releaseButton${i}">Release</button>
           <button type="button" class="btn btn-primary">View Profile</button>
         </div>
       </div>`
@@ -111,4 +111,10 @@ const updateHealthBar = (id) => {
   $(`#healthBar${id}`).attr("style", `width: ${dinos[id].health}%`)
 };
 
+const releaseDino = (id) => {
+  const dinos = getDinos();
+  $(`#releaseButton${id}`).click(
+    dinos.splice(id, 1);
+  )
+}
 export { displayDinos };

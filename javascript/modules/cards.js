@@ -4,7 +4,7 @@ const displayDinos = (divId, x, y) => {
   const dinos = getDinos();
 
   for (let i = 0; i < dinos.length; i++) {
-    if ( x < dinos[i].health && dinos[i].health < y) {
+    if (x < dinos[i].health && dinos[i].health < y) {
       $(`#${divId}`).append(
         `<div class="card" style="width: 18rem;">
         <img src="${dinos[i].imageUrl}" class="card-img-top" alt="image of dinosaur">
@@ -16,8 +16,6 @@ const displayDinos = (divId, x, y) => {
                 <p class="card-text" id="dinoHealth${i}">${dinos[i].health}%</p>  
               </div>
             </div>
-          
-
           </div>
           <button type="button" class="btn btn-primary" id="feedButton${i}">Feed</button>
           <button type="button" class="btn btn-primary" id="petButton${i}">Pet</button>
@@ -26,37 +24,50 @@ const displayDinos = (divId, x, y) => {
           <button type="button" class="btn btn-primary">View Profile</button>
         </div>
       </div>`
-      )
-
+      );
       petDino(i);
       feedDino(i);
       sendOnAdventure(i);
+      updateHealthBar(i);
     }
   }
-
-
-}
+};
 
 const petDino = (id) => {
   const dinos = getDinos();
 
   $(`#petButton${id}`).click(() => {
     dinos[id].health += 5;
-    $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
-  })
-}
+    $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
+    updateHealthBar(id);
+  });
+};
 
 const feedDino = (id) => {
   const dinos = getDinos();
 
   $(`#feedButton${id}`).click(() => {
     dinos[id].health += 10;
-    $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
-  })
-}
+    $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
+    updateHealthBar(id);
+  });
+};
 
 const adventureTime = () => {
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   const date = new Date();
   const month = months[date.getMonth()];
   const day = date.getDate();
@@ -65,14 +76,15 @@ const adventureTime = () => {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  return `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`
-}
+  return `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+};
 
 const sendOnAdventure = (id) => {
   $(`#adventureButton${id}`).click(() => {
     const dinos = getDinos();
     const adventures = getAdventures();
-    const selectedAdventure = adventures[Math.floor(Math.random() * adventures.length)];
+    const selectedAdventure =
+      adventures[Math.floor(Math.random() * adventures.length)];
     let adventureObj = {};
 
     adventureObj.adventure = selectedAdventure.title;
@@ -80,12 +92,23 @@ const sendOnAdventure = (id) => {
 
     dinos[id].adventures.push(adventureObj);
     dinos[id].health -= selectedAdventure.healthHit;
-    $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
-  })
-}
+    $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
+    updateHealthBar(id);
+  });
+};
 
 const updateHealthBar = (id) => {
+  const dinos = getDinos();
 
-}
+  if (0 < dinos[id].health && dinos[id].health < 30) {
+    $(`#healthBar${id}`).attr("class", "progress-bar bg-danger");
+  } else if (29 < dinos[id].health && dinos[id].health < 60) {
+    $(`#healthBar${id}`).attr("class", "progress-bar bg-warning");
+  } else if (59 < dinos[id].health && dinos[id].health < 101) {
+    $(`#healthBar${id}`).attr("class", "progress-bar bg-success");  
+  };
+
+  $(`#healthBar${id}`).attr("style", `width: ${dinos[id].health}%`)
+};
 
 export { displayDinos };

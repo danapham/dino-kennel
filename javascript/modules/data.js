@@ -152,4 +152,4 @@ const getAdventures = () => {
   return adventures;
 }
 
-export { getDinos, getAdventures}
+export { getDinos, getAdventures }

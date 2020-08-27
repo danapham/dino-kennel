@@ -1,4 +1,4 @@
-import { getDinos } from "./data.js";
+import { getDinos, getAdventures } from "./data.js";
 
 const displayDinos = (divId, x, y) => {
   const dinos = getDinos();
@@ -13,7 +13,7 @@ const displayDinos = (divId, x, y) => {
           <p class="card-text" id="dinoHealth${i}">Health: ${dinos[i].health}</p>
           <button type="button" class="btn btn-primary" id="feedButton${i}">Feed</button>
           <button type="button" class="btn btn-primary" id="petButton${i}">Pet</button>
-          <button type="button" class="btn btn-primary">Adventure</button>
+          <button type="button" class="btn btn-primary" id="adventureButton${i}">Adventure</button>
           <button type="button" class="btn btn-primary">Release</button>
           <button type="button" class="btn btn-primary">View Profile</button>
         </div>
@@ -22,6 +22,7 @@ const displayDinos = (divId, x, y) => {
 
       petDino(i);
       feedDino(i);
+      sendOnAdventure(i);
     }
   }
 
@@ -42,6 +43,35 @@ const feedDino = (id) => {
 
   $(`#feedButton${id}`).click(() => {
     dinos[id].health += 10;
+    $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
+  })
+}
+
+const adventureTime = () => {
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  const date = new Date();
+  const month = months[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  return `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`
+}
+
+const sendOnAdventure = (id) => {
+  $(`#adventureButton${id}`).click(() => {
+    const dinos = getDinos();
+    const adventures = getAdventures();
+    const selectedAdventure = adventures[Math.floor(Math.random() * adventures.length)];
+    let adventureObj = {};
+
+    adventureObj.adventure = selectedAdventure.title;
+    adventureObj.timestamp = adventureTime();
+
+    dinos[id].adventures.push(adventureObj);
+    dinos[id].health -= selectedAdventure.healthHit;
     $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
   })
 }

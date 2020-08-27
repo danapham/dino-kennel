@@ -10,7 +10,15 @@ const displayDinos = (divId, x, y) => {
         <img src="${dinos[i].imageUrl}" class="card-img-top" alt="image of dinosaur">
         <div class="card-body">
           <h5 class="card-title">${dinos[i].name}</h5>
-          <p class="card-text" id="dinoHealth${i}">Health: ${dinos[i].health}</p>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" id="healthBar${i}" style="width: ${dinos[i].health}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="health-bar-text">
+                <p class="card-text" id="dinoHealth${i}">${dinos[i].health}%</p>  
+              </div>
+            </div>
+          
+
+          </div>
           <button type="button" class="btn btn-primary" id="feedButton${i}">Feed</button>
           <button type="button" class="btn btn-primary" id="petButton${i}">Pet</button>
           <button type="button" class="btn btn-primary" id="adventureButton${i}">Adventure</button>
@@ -74,6 +82,10 @@ const sendOnAdventure = (id) => {
     dinos[id].health -= selectedAdventure.healthHit;
     $(`#dinoHealth${id}`).html(`Health: ${dinos[id].health}`)
   })
+}
+
+const updateHealthBar = (id) => {
+
 }
 
 export { displayDinos };

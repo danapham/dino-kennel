@@ -6,7 +6,7 @@ const displayDinos = (divId, x, y) => {
   for (let i = 0; i < dinos.length; i++) {
     if (x < dinos[i].health && dinos[i].health < y) {
       $(`#${divId}`).append(
-        `<div class="card" style="width: 18rem;">
+        `<div class="card" style="width: 18rem;" id="dinoCard${i}">
         <img src="${dinos[i].imageUrl}" class="card-img-top" alt="image of dinosaur">
         <div class="card-body">
           <h5 class="card-title">${dinos[i].name}</h5>
@@ -29,6 +29,7 @@ const displayDinos = (divId, x, y) => {
       feedDino(i);
       sendOnAdventure(i);
       updateHealthBar(i);
+      releaseDino(i);
     }
   }
 };
@@ -105,16 +106,24 @@ const updateHealthBar = (id) => {
   } else if (29 < dinos[id].health && dinos[id].health < 60) {
     $(`#healthBar${id}`).attr("class", "progress-bar bg-warning");
   } else if (59 < dinos[id].health && dinos[id].health < 101) {
-    $(`#healthBar${id}`).attr("class", "progress-bar bg-success");  
-  };
+    $(`#healthBar${id}`).attr("class", "progress-bar bg-success");
+  }
 
-  $(`#healthBar${id}`).attr("style", `width: ${dinos[id].health}%`)
+  $(`#healthBar${id}`).attr("style", `width: ${dinos[id].health}%`);
 };
 
 const releaseDino = (id) => {
-  const dinos = getDinos();
-  $(`#releaseButton${id}`).click(
+  $(`#releaseButton${id}`).click(() => {
+    const dinos = getDinos();
+
     dinos.splice(id, 1);
-  )
-}
+    $("#kennel").html("");
+    $("#hospital").html("");
+    $("#graveyard").html("");
+    displayDinos("kennel", 29, 101)
+    displayDinos("hospital", 0, 30)
+    displayDinos("graveyard", -1, 1)
+  });
+};
+
 export { displayDinos };

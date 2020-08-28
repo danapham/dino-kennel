@@ -38,7 +38,12 @@ const petDino = (id) => {
   const dinos = getDinos();
 
   $(`#petButton${id}`).click(() => {
-    dinos[id].health += 5;
+    if (dinos[id].health + 5 > 100) {
+      dinos[id].health = 100;
+    } else {
+      dinos[id].health += 5;
+    }
+
     $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
     updateHealthBar(id);
   });
@@ -48,7 +53,12 @@ const feedDino = (id) => {
   const dinos = getDinos();
 
   $(`#feedButton${id}`).click(() => {
-    dinos[id].health += 10;
+    if (dinos[id].health + 10 > 100) {
+      dinos[id].health = 100;
+    } else {
+      dinos[id].health += 10;
+    }
+
     $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
     updateHealthBar(id);
   });
@@ -92,7 +102,13 @@ const sendOnAdventure = (id) => {
     adventureObj.timestamp = adventureTime();
 
     dinos[id].adventures.push(adventureObj);
-    dinos[id].health -= selectedAdventure.healthHit;
+
+    if (dinos[id].health - selectedAdventure.healthHit < 0) {
+      dinos[id].health = 0;
+    } else {
+      dinos[id].health -= selectedAdventure.healthHit;
+    }
+
     $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
     updateHealthBar(id);
   });

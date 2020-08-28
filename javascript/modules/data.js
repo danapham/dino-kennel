@@ -1,6 +1,5 @@
 const dinos = [
   {
-    id: 'dino1',
     name: 'Rex',
     type: 'T Rex',
     age: 100,
@@ -10,7 +9,6 @@ const dinos = [
     imageUrl: 'https://www.fieldandstream.com/resizer/8xkluKAxQZsEHJKj6qwyU0mLhTo=/760x448/filters:focal(458x270:459x271)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/TQFN3CD5DAEM4DL2ACD42ZJ5E4.png'
   },
   {
-    id: 'dino2',
     name: 'Steve',
     type: 'Velociraptor',
     age: 1,
@@ -20,7 +18,6 @@ const dinos = [
     imageUrl: 'https://i.ebayimg.com/images/g/61UAAOSweNpdmtI2/s-l640.png'
   },
   {
-    id: 'dino3',
     name: 'Susan',
     type: 'stegosaurus',
     age: 55,
@@ -30,7 +27,6 @@ const dinos = [
     imageUrl: 'https://cdn.mos.cms.futurecdn.net/owYTb9X5fKpeBhgiaxD73b-320-80.jpg'
   },
   {
-    id: 'dino4',
     name: 'Barry',
     type: 'Brontosaurus',
     age: 100,
@@ -40,7 +36,6 @@ const dinos = [
     imageUrl: 'https://luksusbaby.com/images/schleich-tyrannosaurus-rex-juvenile-dinosaur-15007-p.png'
   },
   {
-    id: 'dino5',
     name: 'Steph',
     type: 'Spinosaurus',
     age: 100,
@@ -50,7 +45,6 @@ const dinos = [
     imageUrl: 'https://cdn1.bigcommerce.com/n-yp39j5/ujq6o/products/1060/images/2390/Papo_Spinosaurus_2019_DansDinosaurs__69805.1552618774.1280.1280.jpg?c=2'
   },
   {
-    id: 'dino6',
     name: 'Tim',
     type: 'Talarurus',
     age: 100,
@@ -60,7 +54,6 @@ const dinos = [
     imageUrl: 'https://vignette.wikia.nocookie.net/dinosaurs/images/2/2b/TalarurusInfobox.png/revision/latest/scale-to-width-down/340?cb=20150512165226'
   },
   {
-    id: 'dino7',
     name: 'Tracy',
     type: 'Triceratops',
     age: 100,
@@ -70,7 +63,6 @@ const dinos = [
     imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81Wsvp2M7iL._AC_SX425_.jpg'
   },
   {
-    id: 'dino8',
     name: 'Percy',
     type: 'Pterodactyl',
     age: 10,
@@ -80,7 +72,6 @@ const dinos = [
     imageUrl: 'https://images.dinosaurpictures.org/3_pterodactyl_63be.jpg'
   },
   {
-    id: 'dino9',
     name: 'Betty',
     type: 'brontosaurus',
     age: 22,

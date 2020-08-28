@@ -30,34 +30,34 @@
     
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
-            <form>
+            <form id="newDinoForm">
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault01">Name</label>
-                  <input type="text" class="form-control" id="validationDefault01" required>
+                  <input type="text" class="form-control" name="name" id="name" required>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault02">Owner</label>
-                  <input type="text" class="form-control" id="validationDefault02" required>
+                  <input type="text" class="form-control" name="owner" id="owner" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault03">Age</label>
-                  <input type="text" class="form-control" id="validationDefault03" required>
+                  <input type="text" class="form-control" name="age" id="age" required>
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="validationDefault05">Image</label>
-                  <input type="url" class="form-control" id="validationDefault05" required>
+                  <input type="url" class="form-control" name="imageUrl" id="imageUrl" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault03">Type</label>
-                  <input type="text" class="form-control" id="validationDefault03" required>
+                  <input type="text" class="form-control" name="type" id="type" required>
                 </div>
               </div>
-              <button class="btn btn-primary" type="submit">Submit</button>
+              <button class="btn btn-primary" type="button" id="newDinoSubmit">Submit</button>
             </form>
           </div>
         </div>

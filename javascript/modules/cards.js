@@ -1,4 +1,5 @@
 import { getDinos, getAdventures } from "./data.js";
+import { displayAdventureLog } from "./profile.js";
 
 const displayDinos = (divId, x, y) => {
   const dinos = getDinos();
@@ -21,15 +22,57 @@ const displayDinos = (divId, x, y) => {
           <button type="button" class="btn btn-primary" id="petButton${i}">Pet</button>
           <button type="button" class="btn btn-primary" id="adventureButton${i}">Adventure</button>
           <button type="button" class="btn btn-primary" id="releaseButton${i}">Release</button>
-          <button type="button" class="btn btn-primary">View Profile</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#profile${i}" id="profileButton${i}">View Profile</button>
         </div>
-      </div>`
+
+        <div class="modal fade" id="profile${i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">About ${dinos[i].name}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="${dinos[i].imageUrl}" class="card-img-top" alt="image of dinosaur">
+                  </div>
+                <div class="col-md-4 ml-auto">
+                  <h6>Type: ${dinos[i].type}</h6>
+                  <h6>Age: ${dinos[i].age}</h6>
+                  <h6>Owner: ${dinos[i].owner}</h6>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" id="healthBar${i}" style="width: ${dinos[i].health}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                      <div class="health-bar-text">
+                        <p class="card-text" id="dinoHealth${i}">${dinos[i].health}%</p>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="row">
+                  <div class="col">
+                    <h6>Date</h6>
+                  </div>
+                  <div class="col">
+                    <h6>Adventure</h6>
+                  </div>
+                </div>
+              </div>
+              <div id="adventureLog${i}"></div>
+            </div>
+          </div>
+        </div>`
       );
       petDino(i);
       feedDino(i);
       sendOnAdventure(i);
       updateHealthBar(i);
       releaseDino(i);
+      displayAdventureLog(i);
     }
   }
 };
@@ -157,9 +200,9 @@ const releaseDino = (id) => {
     $("#kennel").html("");
     $("#hospital").html("");
     $("#graveyard").html("");
-    displayDinos("kennel", 29, 101)
-    displayDinos("hospital", 0, 30)
-    displayDinos("graveyard", -1, 1)
+    displayDinos("kennel", 29, 101);
+    displayDinos("hospital", 0, 30);
+    displayDinos("graveyard", -1, 1);
   });
 };
 

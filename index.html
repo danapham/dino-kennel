@@ -22,47 +22,90 @@
       <div class="card">
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button
+              class="btn btn-link btn-block text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
               Add Dino
             </button>
           </h2>
         </div>
-    
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+
+        <div
+          id="collapseOne"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
           <div class="card-body">
             <form id="newDinoForm">
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault01">Name</label>
-                  <input type="text" class="form-control" name="name" id="name" required>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="name"
+                    required
+                  />
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault02">Owner</label>
-                  <input type="text" class="form-control" name="owner" id="owner" required>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="owner"
+                    id="owner"
+                    required
+                  />
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault03">Age</label>
-                  <input type="text" class="form-control" name="age" id="age" required>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="age"
+                    id="age"
+                    required
+                  />
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="validationDefault05">Image</label>
-                  <input type="url" class="form-control" name="imageUrl" id="imageUrl" required>
+                  <input
+                    type="url"
+                    class="form-control"
+                    name="imageUrl"
+                    id="imageUrl"
+                    required
+                  />
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault03">Type</label>
-                  <input type="text" class="form-control" name="type" id="type" required>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="type"
+                    id="type"
+                    required
+                  />
                 </div>
               </div>
-              <button class="btn btn-primary" type="button" id="newDinoSubmit">Submit</button>
+              <button class="btn btn-primary" type="button" id="newDinoSubmit">
+                Submit
+              </button>
             </form>
           </div>
         </div>
       </div>
-
     </div>
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -71,7 +114,7 @@
           class="nav-link active"
           id="kennel-tab"
           data-toggle="tab"
-          href="#kennel"
+          href="#kennelTab"
           role="tab"
           aria-controls="kennel"
           aria-selected="true"
@@ -83,7 +126,7 @@
           class="nav-link"
           id="hospital-tab"
           data-toggle="tab"
-          href="#hospital"
+          href="#hospitalTab"
           role="tab"
           aria-controls="hospital"
           aria-selected="false"
@@ -95,7 +138,7 @@
           class="nav-link"
           id="graveyard-tab"
           data-toggle="tab"
-          href="#graveyard"
+          href="#graveyardTab"
           role="tab"
           aria-controls="graveyard"
           aria-selected="false"
@@ -106,24 +149,31 @@
     <div class="tab-content" id="myTabContent">
       <div
         class="tab-pane fade show active"
-        id="kennel"
+        id="kennelTab"
         role="tabpanel"
         aria-labelledby="kennel-tab"
-      ></div>
+      >
+        <div id="kennel"></div>
+      </div>
       <div
         class="tab-pane fade"
-        id="hospital"
+        id="hospitalTab"
         role="tabpanel"
         aria-labelledby="hospital-tab"
-      ></div>
+      >
+        <div id="hospital"></div>
+      </div>
       <div
         class="tab-pane fade"
-        id="graveyard"
+        id="graveyardTab"
         role="tabpanel"
         aria-labelledby="graveyard-tab"
-      ></div>
+      >
+        <div id="graveyard"></div>
+      </div>
     </div>
 
+    <script src="https://kit.fontawesome.com/082a2688ff.js" crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

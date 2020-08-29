@@ -7,8 +7,10 @@ const displayDinos = (divId, x, y) => {
   for (let i = 0; i < dinos.length; i++) {
     if (x < dinos[i].health && dinos[i].health < y) {
       $(`#${divId}`).append(
-        `<div class="card" style="width: 18rem;" id="dinoCard${i}">
-        <img src="${dinos[i].imageUrl}" class="card-img-top" alt="image of dinosaur">
+        `<div class="card" style="width: 19rem;" id="dinoCard${i}">
+        <div class="card-image-container">
+          <img src="${dinos[i].imageUrl}" class="card-img-top card-image" alt="image of dinosaur">
+        </div>
         <div class="card-body">
           <h5 class="card-title">${dinos[i].name}</h5>
           <div class="progress">
@@ -18,11 +20,13 @@ const displayDinos = (divId, x, y) => {
               </div>
             </div>
           </div>
-          <button type="button" class="btn btn-primary" id="feedButton${i}">Feed</button>
-          <button type="button" class="btn btn-primary" id="petButton${i}">Pet</button>
-          <button type="button" class="btn btn-primary" id="adventureButton${i}">Adventure</button>
-          <button type="button" class="btn btn-primary" id="releaseButton${i}">Release</button>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#profile${i}" id="profileButton${i}">View Profile</button>
+
+          <button type="button" class="btn btn-primary card-btn" id="feedButton${i}" title="Feed"><i class="fas fa-seedling"></i></button>
+          <button type="button" class="btn btn-primary card-btn" id="petButton${i}" title="Pet"><i class="fas fa-hand-paper"></i></button>
+          <button type="button" class="btn btn-primary card-btn" id="adventureButton${i}" title="Send on adventure"><i class="fas fa-snowboarding"></i></button>
+          <button type="button" class="btn btn-primary card-btn" id="releaseButton${i}" title="Release into wild"><i class="far fa-arrow-alt-circle-right"></i></button>
+          <button type="button" class="btn btn-primary card-btn" data-toggle="modal" data-target="#profile${i}" id="profileButton${i}" title="View dino log"><i class="fas fa-book-open"></i></button>
+
         </div>
 
         <div class="modal fade" id="profile${i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

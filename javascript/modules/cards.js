@@ -46,6 +46,13 @@ const petDino = (id) => {
 
     $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
     updateHealthBar(id);
+
+    $("#kennel").html("");
+    $("#hospital").html("");
+    $("#graveyard").html("");
+    displayDinos("kennel", 29, 101);
+    displayDinos("hospital", 0, 30);
+    displayDinos("graveyard", -1, 1);
   });
 };
 
@@ -61,6 +68,13 @@ const feedDino = (id) => {
 
     $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
     updateHealthBar(id);
+
+    $("#kennel").html("");
+    $("#hospital").html("");
+    $("#graveyard").html("");
+    displayDinos("kennel", 29, 101);
+    displayDinos("hospital", 0, 30);
+    displayDinos("graveyard", -1, 1);
   });
 };
 
@@ -111,6 +125,13 @@ const sendOnAdventure = (id) => {
 
     $(`#dinoHealth${id}`).html(`${dinos[id].health}%`);
     updateHealthBar(id);
+
+    $("#kennel").html("");
+    $("#hospital").html("");
+    $("#graveyard").html("");
+    displayDinos("kennel", 29, 101);
+    displayDinos("hospital", 0, 30);
+    displayDinos("graveyard", -1, 1);
   });
 };
 

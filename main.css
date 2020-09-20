@@ -1,3 +1,8 @@
+.accordion-form {
+  background-image: url('./images/jungle-leaves-bg.jpg');
+  background-size: cover;
+};
+
 .health-bar-text {
   display: flex;
   justify-content: center;
@@ -8,6 +13,7 @@
 #hospital {
   display: flex;
   justify-content: space-around;
+  flex-flow: row wrap;
   padding: 3%;
 }
 

@@ -7,7 +7,7 @@ const displayDinos = (divId, x, y) => {
   for (let i = 0; i < dinos.length; i++) {
     if (x < dinos[i].health && dinos[i].health < y) {
       $(`#${divId}`).append(
-        `<div class="card" style="width: 19rem;" id="dinoCard${i}">
+        `<div class="card" style="width: 20%" id="dinoCard${i}">
         <div class="card-image-container">
           <img src="${dinos[i].imageUrl}" class="card-img-top card-image" alt="image of dinosaur">
         </div>

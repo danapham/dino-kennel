@@ -1,144 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dino Kennel</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="main.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dino Kennel</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="main.css"/>
+	</head>
 
-  <body>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="index.html">Dino Kennel</a>
-    </nav>
+	<body>
+		<div class="accordion" id="accordionExample">
+			<div class="card accordion-form">
+        <a class="text-white text-center display-3" href="index.html">Dino Kennel</a>
+				<div class="card-header" id="headingOne">
+					<h2 class="mb-0">
+						<button
+							class="btn btn-link btn-block text-center text-white"
+							type="button"
+							data-toggle="collapse"
+							data-target="#collapseOne"
+							aria-expanded="true"
+							aria-controls="collapseOne"
+						>
+							Add Dino
+						</button>
+					</h2>
+				</div>
 
-    <div class="accordion" id="accordionExample">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Add Dino
-            </button>
-          </h2>
-        </div>
-    
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">
-            <form id="newDinoForm">
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationDefault01">Name</label>
-                  <input type="text" class="form-control" name="name" id="name" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="validationDefault02">Owner</label>
-                  <input type="text" class="form-control" name="owner" id="owner" required>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationDefault03">Age</label>
-                  <input type="text" class="form-control" name="age" id="age" required>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <label for="validationDefault05">Image</label>
-                  <input type="url" class="form-control" name="imageUrl" id="imageUrl" required>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationDefault03">Type</label>
-                  <input type="text" class="form-control" name="type" id="type" required>
-                </div>
-              </div>
-              <button class="btn btn-primary" type="button" id="newDinoSubmit">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
+				<div
+					id="collapseOne"
+					class="collapse"
+					aria-labelledby="headingOne"
+					data-parent="#accordionExample"
+				>
+					<div class="card-body">
+						<form id="newDinoForm">
+							<div class="form-row">
+								<div class="col-md-6 mb-3">
+									<label for="validationDefault01" class="text-white">Name</label>
+									<input
+										type="text"
+										class="form-control"
+										name="name"
+										id="name"
+										required
+									/>
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="validationDefault02" class="text-white">Owner</label>
+									<input
+										type="text"
+										class="form-control"
+										name="owner"
+										id="owner"
+										required
+									/>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-md-6 mb-3">
+									<label for="validationDefault03" class="text-white">Age</label>
+									<input
+										type="text"
+										class="form-control"
+										name="age"
+										id="age"
+										required
+									/>
+								</div>
+								<div class="col-md-3 mb-3">
+									<label for="validationDefault05" class="text-white">Image</label>
+									<input
+										type="url"
+										class="form-control"
+										name="imageUrl"
+										id="imageUrl"
+										required
+									/>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-md-6 mb-3">
+									<label for="validationDefault03" class="text-white">Type</label>
+									<input
+										type="text"
+										class="form-control"
+										name="type"
+										id="type"
+										required
+									/>
+								</div>
+							</div>
+							<button class="btn btn-primary" type="button" id="newDinoSubmit">
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    </div>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<a
+					class="nav-link active"
+					id="kennel-tab"
+					data-toggle="tab"
+					href="#kennelTab"
+					role="tab"
+					aria-controls="kennel"
+					aria-selected="true"
+					>Kennel</a
+				>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a
+					class="nav-link"
+					id="hospital-tab"
+					data-toggle="tab"
+					href="#hospitalTab"
+					role="tab"
+					aria-controls="hospital"
+					aria-selected="false"
+					>Hospital</a
+				>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a
+					class="nav-link"
+					id="graveyard-tab"
+					data-toggle="tab"
+					href="#graveyardTab"
+					role="tab"
+					aria-controls="graveyard"
+					aria-selected="false"
+					>Graveyard</a
+				>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			<div
+				class="tab-pane fade show active"
+				id="kennelTab"
+				role="tabpanel"
+				aria-labelledby="kennel-tab"
+			>
+				<div id="kennel"></div>
+			</div>
+			<div
+				class="tab-pane fade"
+				id="hospitalTab"
+				role="tabpanel"
+				aria-labelledby="hospital-tab"
+			>
+				<div id="hospital"></div>
+			</div>
+			<div
+				class="tab-pane fade"
+				id="graveyardTab"
+				role="tabpanel"
+				aria-labelledby="graveyard-tab"
+			>
+				<div id="graveyard"></div>
+			</div>
+		</div>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link active"
-          id="kennel-tab"
-          data-toggle="tab"
-          href="#kennel"
-          role="tab"
-          aria-controls="kennel"
-          aria-selected="true"
-          >Kennel</a
-        >
-      </li>
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link"
-          id="hospital-tab"
-          data-toggle="tab"
-          href="#hospital"
-          role="tab"
-          aria-controls="hospital"
-          aria-selected="false"
-          >Hospital</a
-        >
-      </li>
-      <li class="nav-item" role="presentation">
-        <a
-          class="nav-link"
-          id="graveyard-tab"
-          data-toggle="tab"
-          href="#graveyard"
-          role="tab"
-          aria-controls="graveyard"
-          aria-selected="false"
-          >Graveyard</a
-        >
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div
-        class="tab-pane fade show active"
-        id="kennel"
-        role="tabpanel"
-        aria-labelledby="kennel-tab"
-      ></div>
-      <div
-        class="tab-pane fade"
-        id="hospital"
-        role="tabpanel"
-        aria-labelledby="hospital-tab"
-      ></div>
-      <div
-        class="tab-pane fade"
-        id="graveyard"
-        role="tabpanel"
-        aria-labelledby="graveyard-tab"
-      ></div>
-    </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="./javascript/main.js"></script>
-  </body>
+		<script
+			src="https://kit.fontawesome.com/082a2688ff.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"
+		></script>
+		<script type="module" src="./javascript/main.js"></script>
+	</body>
 </html>

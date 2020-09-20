@@ -1,4 +1,45 @@
+.accordion-form {
+  background-image: url('./images/jungle-leaves-bg.jpg');
+  background-size: cover;
+};
+
 .health-bar-text {
   display: flex;
   justify-content: center;
+}
+
+#graveyard,
+#kennel,
+#hospital {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  padding: 3%;
+}
+
+#kennelTab.active {
+  background-image: url(./images/kennel.jpg);
+  background-size: cover;
+  height: 50rem;
+}
+
+#hospitalTab.active {
+  background-image: url(./images/hospital.jpg);
+  background-size: cover;
+  height: 50rem;
+}
+
+#graveyardTab.active {
+  background-image: url(./images/graveyard.jpg);
+  background-size: cover;
+  height: 50rem;
+}
+
+.card-btn {
+  margin-top: 3%;
+  margin-left:  2%;
+}
+
+.card-image-container {
+  height: 50%;
 }

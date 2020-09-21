@@ -43,3 +43,8 @@
 .card-image-container {
   height: 50%;
 }
+
+footer {
+  background-image: url('./images/jungle-leaves-bg.jpg');
+  background-size: cover;
+}

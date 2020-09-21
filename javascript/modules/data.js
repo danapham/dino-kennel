@@ -6,7 +6,7 @@ const dinos = [
     owner: 'Jacob',
     adventures: [],
     health: 92,
-    imageUrl: 'https://www.fieldandstream.com/resizer/8xkluKAxQZsEHJKj6qwyU0mLhTo=/760x448/filters:focal(458x270:459x271)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/TQFN3CD5DAEM4DL2ACD42ZJ5E4.png'
+    imageUrl: 'images/dino14.png'
   },
   {
     name: 'Steve',
@@ -15,7 +15,7 @@ const dinos = [
     owner: 'Jacob',
     adventures: [],
     health: 1,
-    imageUrl: 'https://i.ebayimg.com/images/g/61UAAOSweNpdmtI2/s-l640.png'
+    imageUrl: 'images/dino2.png'
   },
   {
     name: 'Susan',
@@ -24,7 +24,7 @@ const dinos = [
     owner: 'Jacob',
     adventures: [],
     health: 0,
-    imageUrl: 'https://cdn.mos.cms.futurecdn.net/owYTb9X5fKpeBhgiaxD73b-320-80.jpg'
+    imageUrl: 'images/dino3.jpg'
   },
   {
     name: 'Barry',
@@ -33,7 +33,7 @@ const dinos = [
     owner: 'Abbey',
     adventures: [],
     health: 100,
-    imageUrl: 'https://luksusbaby.com/images/schleich-tyrannosaurus-rex-juvenile-dinosaur-15007-p.png'
+    imageUrl: 'images/dino4.jpg'
   },
   {
     name: 'Steph',
@@ -42,7 +42,7 @@ const dinos = [
     owner: 'Dr. T',
     adventures: [],
     health: 75,
-    imageUrl: 'https://cdn1.bigcommerce.com/n-yp39j5/ujq6o/products/1060/images/2390/Papo_Spinosaurus_2019_DansDinosaurs__69805.1552618774.1280.1280.jpg?c=2'
+    imageUrl: 'images/dino5.png'
   },
   {
     name: 'Tim',
@@ -51,7 +51,7 @@ const dinos = [
     owner: 'Dr. T',
     adventures: [],
     health: 55,
-    imageUrl: 'https://vignette.wikia.nocookie.net/dinosaurs/images/2/2b/TalarurusInfobox.png/revision/latest/scale-to-width-down/340?cb=20150512165226'
+    imageUrl: 'images/dino6.png'
   },
   {
     name: 'Tracy',
@@ -60,7 +60,7 @@ const dinos = [
     owner: 'Abbey',
     adventures: [],
     health: 0,
-    imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81Wsvp2M7iL._AC_SX425_.jpg'
+    imageUrl: 'images/dino7.png'
   },
   {
     name: 'Percy',
@@ -69,7 +69,7 @@ const dinos = [
     owner: 'Jacob',
     adventures: [],
     health: 10,
-    imageUrl: 'https://images.dinosaurpictures.org/3_pterodactyl_63be.jpg'
+    imageUrl: 'images/dino9.png'
   },
   {
     name: 'Betty',
@@ -78,7 +78,7 @@ const dinos = [
     owner: 'Dr. T',
     adventures: [],
     health: 22,
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOdrC7hlvBawFQ7g8vgwHcfQphX5WfeN2bth0dvc4M2oxNGdSD'
+    imageUrl: 'images/dino11.png'
   }
 ];
 

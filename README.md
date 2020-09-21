@@ -3,6 +3,8 @@ A single page application that displays pet dinos in a dino kennel. The user can
 
 ## Screenshots
 
+![Screenshot of Kennel Tab] (images/screenshot1.png)
+
 ## Technologies Used
 - Javascript
 - Jquery
